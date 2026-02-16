@@ -1,7 +1,4 @@
-import {useState} from 'react'
-
-
-
+import {useState} from 'react'  //{} the things in int curly braces are hooks.
 
 export default function Counter(){
 
@@ -14,7 +11,7 @@ export default function Counter(){
 
 const [ count,setCount] = useState(0);  //way to create state. if we want to give default value we have to pass it on useState(0).
 function handleIncrement(){
-    setCount(count=>count+1); //instead of count++ we need to do like this.
+    setCount(count=>count+1); //instead of count++ we need to do like this. call setter(setCount) to do any changes. use arrow becz we change state not value. to change state we always use arrow function.
     //count++;
     console.log(count);
 
