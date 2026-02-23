@@ -1,5 +1,5 @@
 import {useState} from 'react'  //{} the things in int curly braces are hooks.
-
+import { useEffect } from 'react';
 export default function Counter(){
 
 //State = data jo component ke andar change hota hai aur screen ko update karta hai.
@@ -26,6 +26,9 @@ function handleDecrement(){//to see the decrement and increment on the web page 
     console.log(count);
 
 }
+useEffect(()=>{console.log("Welcome")},[])//mount stage
+
+ useEffect(()=>{console.log("Count updated")},[count])//updating state.
 
     return(
         <div>
@@ -36,6 +39,7 @@ function handleDecrement(){//to see the decrement and increment on the web page 
             <h3>Count = {count}</h3>
             <button onClick= {handleIncrement}>   + </button>
             <button onClick={handleDecrement}> - </button>
+            
         </div>
 
     );
